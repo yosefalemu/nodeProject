@@ -13,7 +13,6 @@ const authenticationMiddleware = async (req, res, next) => {
     req.user = { id, username };
     next();
   } catch (error) {
-    console.log("authorized error");
     throw new UnauthenticatedError("not authorized");
   }
 };
